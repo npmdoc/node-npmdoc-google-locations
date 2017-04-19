@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://github.com/eastbayjake/google-locations"
-
-    >google-locations (v0.2.0)</a>
+    <a href="http://github.com/eastbayjake/google-locations">google-locations (v0.2.0)</a>
 </h1>
 <h4>Google Places API for Node.js, with convenience methods to search by address or phone number</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.google-locations">module google-locations</a><ol>
 
@@ -193,11 +186,11 @@
   // Set default options
   if (!options) options = {};
   options = _.defaults(options, {
-    format: &#x27;json&#x27;,
-    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
-    host: &#x27;maps.googleapis.com&#x27;,
+    format: 'json',
+    headers: { "User-Agent": 'Google-Locations (https://www.npmjs.org/package/google-locations)' },
+    host: 'maps.googleapis.com',
     port: 443,
-    path: &#x27;/maps/api/&#x27;
+    path: '/maps/api/'
   });
 
   this.config = {
@@ -227,11 +220,11 @@
   // Set default options
   if (!options) options = {};
   options = _.defaults(options, {
-    format: &#x27;json&#x27;,
-    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
-    host: &#x27;maps.googleapis.com&#x27;,
+    format: 'json',
+    headers: { "User-Agent": 'Google-Locations (https://www.npmjs.org/package/google-locations)' },
+    host: 'maps.googleapis.com',
     port: 443,
-    path: &#x27;/maps/api/&#x27;
+    path: '/maps/api/'
   });
 
   this.config = {
@@ -268,11 +261,11 @@
   // Set default options
   if (!options) options = {};
   options = _.defaults(options, {
-    format: &#x27;json&#x27;,
-    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
-    host: &#x27;maps.googleapis.com&#x27;,
+    format: 'json',
+    headers: { "User-Agent": 'Google-Locations (https://www.npmjs.org/package/google-locations)' },
+    host: 'maps.googleapis.com',
     port: 443,
-    path: &#x27;/maps/api/&#x27;
+    path: '/maps/api/'
   });
 
   this.config = {
@@ -305,25 +298,25 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">autocomplete = function (options, cb) {
   options = _.defaults(options, {
-    language: &#x22;en&#x22;,
+    language: "en",
   });
 
-  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;autocomplete&#x27;), cb);
+  _makeRequest(_generateUrl(this, options, 'place', 'autocomplete'), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 locations.details({placeid: response.results[0].place_id}, function(err, response) {
-  console.log(&#x22;search details: &#x22;, response.result.name);
+  console.log("search details: ", response.result.name);
   // search details: Google
 });
 });
 
-locations.<span class="apidocCodeKeywordSpan">autocomplete</span>({input: &#x27;Verm&#x27;, types: &#x22;(cities)&#x22;}, function
+locations.<span class="apidocCodeKeywordSpan">autocomplete</span>({input: 'Verm', types: "(cities)"}, function
 (err, response) {
-console.log(&#x22;autocomplete: &#x22;, response.predictions);
+console.log("autocomplete: ", response.predictions);
 
 var success = function(err, response) {
-  console.log(&#x22;did you mean: &#x22;, response.result.name);
+  console.log("did you mean: ", response.result.name);
   // did you mean:  Vermont
   // did you mean:  Vermont South
   // did you mean:  Vermilion
@@ -340,29 +333,29 @@ var success = function(err, response) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">details = function (options, cb) {
-  if (!options.placeid) return cb({error: &#x27;placeid string required&#x27;});
+  if (!options.placeid) return cb({error: 'placeid string required'});
   options = _.defaults(options, {
-    language: &#x27;en&#x27;
+    language: 'en'
   });
 
-  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;details&#x27;), cb);
+  _makeRequest(_generateUrl(this, options, 'place', 'details'), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var GoogleLocations = require(&#x27;google-locations&#x27;);
+var GoogleLocations = require('google-locations');
 
-var locations = new GoogleLocations(&#x27;YOUR_API_KEY&#x27;);
+var locations = new GoogleLocations('YOUR_API_KEY');
 
-locations.search({keyword: &#x27;Google&#x27;, location: [37.42291810, -122.08542120]}, function(err, response) {
-console.log(&#x22;search: &#x22;, response.results);
+locations.search({keyword: 'Google', location: [37.42291810, -122.08542120]}, function(err, response) {
+console.log("search: ", response.results);
 
 locations.<span class="apidocCodeKeywordSpan">details</span>({placeid: response.results[0].place_id}, function(err, response) {
-  console.log(&#x22;search details: &#x22;, response.result.name);
+  console.log("search details: ", response.result.name);
   // search details: Google
 });
 });
 
-locations.autocomplete({input: &#x27;Verm&#x27;, types: &#x22;(cities)&#x22;}, function(err, response) {
-console.log(&#x22;autocomplete: &#x22;, response.predictions);
+locations.autocomplete({input: 'Verm', types: "(cities)"}, function(err, response) {
+console.log("autocomplete: ", response.predictions);
 ...</pre></li>
     </ul>
 
@@ -376,14 +369,14 @@ console.log(&#x22;autocomplete: &#x22;, response.predictions);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">geocodeAddress = function (options, cb) {
-  if (!options.address) return cb({error: &#x27;Address string required&#x27;});
+  if (!options.address) return cb({error: 'Address string required'});
   options = _.defaults(options, {
-    language: &#x27;en&#x27;
+    language: 'en'
   });
 
-  options.address = options.address.replace(/\s/g, &#x27;+&#x27;);
+  options.address = options.address.replace(/\s/g, '+');
 
-  _makeRequest(_generateUrl(this, options, &#x27;geocode&#x27;, null), cb);
+  _makeRequest(_generateUrl(this, options, 'geocode', null), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -400,12 +393,12 @@ console.log(&#x22;autocomplete: &#x22;, response.predictions);
     <li>description and source-code<pre class="apidocCodePre">reverseGeocode = function (options, cb) {
   options = _.defaults(options, {
     latlng: [37.42291810, -122.08542120],
-    language: &#x27;en&#x27;
+    language: 'en'
   });
 
-  options.latlng = options.latlng.join(&#x27;,&#x27;);
+  options.latlng = options.latlng.join(',');
 
-  _makeRequest(_generateUrl(this, options, &#x27;geocode&#x27;, null), cb);
+  _makeRequest(_generateUrl(this, options, 'geocode', null), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -423,36 +416,36 @@ console.log(&#x22;autocomplete: &#x22;, response.predictions);
   options = _.defaults(options, {
     location: [37.42291810, -122.08542120],
     radius: 10,
-    language: &#x27;en&#x27;,
-    rankby: &#x27;prominence&#x27;,
+    language: 'en',
+    rankby: 'prominence',
     types: []
   });
 
-  options.location = options.location.join(&#x27;,&#x27;);
+  options.location = options.location.join(',');
 
-  if (options.types.length &#x3e; 0) {
-    options.types = options.types.join(&#x27;|&#x27;);
+  if (options.types.length &gt; 0) {
+    options.types = options.types.join('|');
   } else {
     delete options.types;
   }
-  if (options.rankby == &#x27;distance&#x27;) options.radius = null;
+  if (options.rankby == 'distance') options.radius = null;
 
-  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;nearbysearch&#x27;), cb);
+  _makeRequest(_generateUrl(this, options, 'place', 'nearbysearch'), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ## Usage
 ```js
-var GoogleLocations = require(&#x27;google-locations&#x27;);
+var GoogleLocations = require('google-locations');
 
-var locations = new GoogleLocations(&#x27;YOUR_API_KEY&#x27;);
+var locations = new GoogleLocations('YOUR_API_KEY');
 
-locations.<span class="apidocCodeKeywordSpan">search</span>({keyword: &#x27;Google&#x27;, location: [37.42291810, -122.08542120]},
+locations.<span class="apidocCodeKeywordSpan">search</span>({keyword: 'Google', location: [37.42291810, -122.08542120]},
 function(err, response) {
-  console.log(&#x22;search: &#x22;, response.results);
+  console.log("search: ", response.results);
 
   locations.details({placeid: response.results[0].place_id}, function(err, response) {
-    console.log(&#x22;search details: &#x22;, response.result.name);
+    console.log("search details: ", response.result.name);
     // search details: Google
   });
 });
@@ -469,20 +462,20 @@ function(err, response) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">searchByAddress = function (config, cb) {
-  if (!config.address) return cb({error: &#x22;Address string required&#x22;});
+  if (!config.address) return cb({error: "Address string required"});
   var _self = this;
   var options = _generateOptions(config);
   _self.geocodeAddress(options.geocode, function(err, result){
-    if (err) return cb({message: &#x22;Error geocoding address&#x22;, error: err});
+    if (err) return cb({message: "Error geocoding address", error: err});
     try {
       var location = result.results[0].geometry.location;
       var query = _searchQuery(location, options.search);
       _self.search(query, function(err, result){
-        if (err) return cb({message: &#x22;Error searching for places near geocoded location&#x22;, error: err});
+        if (err) return cb({message: "Error searching for places near geocoded location", error: err});
         _batchDetails(_self, result, options.search.maxResults, cb);
       });
     } catch (exp) {
-      return cb({message: &#x22;Malformed results -- try a more specific address&#x22;, error: exp});
+      return cb({message: "Malformed results -- try a more specific address", error: exp});
     }
   });
 }</pre></li>
@@ -494,15 +487,15 @@ for(var index in response.predictions) {
 }
 });
 
-locations.<span class="apidocCodeKeywordSpan">searchByAddress</span>({address: &#x27;1600 Amphitheatre Pkwy, Mountain View, CA&#
-x27;, name: &#x27;Goo&#x27;, maxResults: 2, rankby: &#x22;prominence&#x22;, radius: 5000}, function(err, response){
+locations.<span class="apidocCodeKeywordSpan">searchByAddress</span>({address: '1600 Amphitheatre Pkwy, Mountain View, CA&amp;#
+x27;, name: 'Goo', maxResults: 2, rankby: "prominence", radius: 5000}, function(err, response){
 for (var index in response.details) {
-  console.log(&#x22;Potential Match: &#x22; + response.details[index].name);
+  console.log("Potential Match: " + response.details[index].name);
   // Potential Match: Google
   // Potential Match: Gooey Cookie Factory
 }
 for (var index in response.errors) {
-  console.log(&#x22;Error looking up place details: &#x22;, response.errors[index]);
+  console.log("Error looking up place details: ", response.errors[index]);
 ...</pre></li>
     </ul>
 
@@ -516,12 +509,12 @@ for (var index in response.errors) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">searchByPhone = function (options, cb) {
-  if (!options.phone) return cb({error: &#x22;Missing required parameter &#x27;phone&#x27;&#x22;});
+  if (!options.phone) return cb({error: "Missing required parameter 'phone'"});
   options.maxResults = options.maxResults || 1;
   var _self = this;
 
-  _self.textsearch({query: &#x27;phone number &#x27; + options.phone}, function(err, result){
-    if (err) return cb({message: &#x22;Error from textsearch&#x22;, error: err});
+  _self.textsearch({query: 'phone number ' + options.phone}, function(err, result){
+    if (err) return cb({message: "Error from textsearch", error: err});
     _batchDetails(_self, result, options.maxResults, cb);
   });
 }</pre></li>
@@ -529,11 +522,11 @@ for (var index in response.errors) {
     // Potential Match: Gooey Cookie Factory
   }
   for (var index in response.errors) {
-    console.log(&#x22;Error looking up place details: &#x22;, response.errors[index]);
+    console.log("Error looking up place details: ", response.errors[index]);
   }
 });
 
-locations.<span class="apidocCodeKeywordSpan">searchByPhone</span>({phone: &#x22;(650) 253-0000&#x22;}, maxResults: 2, function(
+locations.<span class="apidocCodeKeywordSpan">searchByPhone</span>({phone: "(650) 253-0000"}, maxResults: 2, function(
 err, response){
   // Returns up to 2 matches for this phone number
 });
@@ -556,10 +549,10 @@ To test simply install development dependencies and run:
     <ul>
     <li>description and source-code<pre class="apidocCodePre">textsearch = function (options, cb) {
   options = _.defaults(options, {
-    query: &#x27;Google near Mountain View, CA&#x27;
+    query: 'Google near Mountain View, CA'
   });
 
-  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;textsearch&#x27;), cb);
+  _makeRequest(_generateUrl(this, options, 'place', 'textsearch'), cb);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -573,3 +566,4 @@ To test simply install development dependencies and run:
     ]
 </div>
 </div>
+</body></html>

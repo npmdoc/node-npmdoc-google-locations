@@ -61,12 +61,509 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.google-locations">module google-locations</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google-locations">
+            function <span class="apidocSignatureSpan"></span>google-locations
+            <span class="apidocSignatureSpan">(key, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations">
+            function <span class="apidocSignatureSpan">google-locations.</span>google_locations
+            <span class="apidocSignatureSpan">(key, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-locations.</span>google_locations.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-locations.google_locations">module google-locations.google_locations</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.google_locations">
+            function <span class="apidocSignatureSpan">google-locations.</span>google_locations
+            <span class="apidocSignatureSpan">(key, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-locations.google_locations.prototype">module google-locations.google_locations.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.autocomplete">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>autocomplete
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.details">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>details
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.geocodeAddress">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>geocodeAddress
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.reverseGeocode">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>reverseGeocode
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.search">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>search
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.searchByAddress">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>searchByAddress
+            <span class="apidocSignatureSpan">(config, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.searchByPhone">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>searchByPhone
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-locations.google_locations.prototype.textsearch">
+            function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>textsearch
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.google-locations" id="apidoc.module.google-locations">module google-locations</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google-locations" id="apidoc.element.google-locations.google-locations">
+        function <span class="apidocSignatureSpan"></span>google-locations
+        <span class="apidocSignatureSpan">(key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">google-locations = function (key, options) {
+  // Set default options
+  if (!options) options = {};
+  options = _.defaults(options, {
+    format: &#x27;json&#x27;,
+    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
+    host: &#x27;maps.googleapis.com&#x27;,
+    port: 443,
+    path: &#x27;/maps/api/&#x27;
+  });
+
+  this.config = {
+    key: key,
+    format: options.format,
+    headers: options.headers,
+    host: options.host,
+    port: options.port,
+    path: options.path
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations" id="apidoc.element.google-locations.google_locations">
+        function <span class="apidocSignatureSpan">google-locations.</span>google_locations
+        <span class="apidocSignatureSpan">(key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">google_locations = function (key, options) {
+  // Set default options
+  if (!options) options = {};
+  options = _.defaults(options, {
+    format: &#x27;json&#x27;,
+    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
+    host: &#x27;maps.googleapis.com&#x27;,
+    port: 443,
+    path: &#x27;/maps/api/&#x27;
+  });
+
+  this.config = {
+    key: key,
+    format: options.format,
+    headers: options.headers,
+    host: options.host,
+    port: options.port,
+    path: options.path
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-locations.google_locations" id="apidoc.module.google-locations.google_locations">module google-locations.google_locations</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.google_locations" id="apidoc.element.google-locations.google_locations.google_locations">
+        function <span class="apidocSignatureSpan">google-locations.</span>google_locations
+        <span class="apidocSignatureSpan">(key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">google_locations = function (key, options) {
+  // Set default options
+  if (!options) options = {};
+  options = _.defaults(options, {
+    format: &#x27;json&#x27;,
+    headers: { &#x22;User-Agent&#x22;: &#x27;Google-Locations (https://www.npmjs.org/package/google-locations)&#x27; },
+    host: &#x27;maps.googleapis.com&#x27;,
+    port: 443,
+    path: &#x27;/maps/api/&#x27;
+  });
+
+  this.config = {
+    key: key,
+    format: options.format,
+    headers: options.headers,
+    host: options.host,
+    port: options.port,
+    path: options.path
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-locations.google_locations.prototype" id="apidoc.module.google-locations.google_locations.prototype">module google-locations.google_locations.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.autocomplete" id="apidoc.element.google-locations.google_locations.prototype.autocomplete">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>autocomplete
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autocomplete = function (options, cb) {
+  options = _.defaults(options, {
+    language: &#x22;en&#x22;,
+  });
+
+  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;autocomplete&#x27;), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+locations.details({placeid: response.results[0].place_id}, function(err, response) {
+  console.log(&#x22;search details: &#x22;, response.result.name);
+  // search details: Google
+});
+});
+
+locations.<span class="apidocCodeKeywordSpan">autocomplete</span>({input: &#x27;Verm&#x27;, types: &#x22;(cities)&#x22;}, function
+(err, response) {
+console.log(&#x22;autocomplete: &#x22;, response.predictions);
+
+var success = function(err, response) {
+  console.log(&#x22;did you mean: &#x22;, response.result.name);
+  // did you mean:  Vermont
+  // did you mean:  Vermont South
+  // did you mean:  Vermilion
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.details" id="apidoc.element.google-locations.google_locations.prototype.details">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>details
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">details = function (options, cb) {
+  if (!options.placeid) return cb({error: &#x27;placeid string required&#x27;});
+  options = _.defaults(options, {
+    language: &#x27;en&#x27;
+  });
+
+  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;details&#x27;), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var GoogleLocations = require(&#x27;google-locations&#x27;);
+
+var locations = new GoogleLocations(&#x27;YOUR_API_KEY&#x27;);
+
+locations.search({keyword: &#x27;Google&#x27;, location: [37.42291810, -122.08542120]}, function(err, response) {
+console.log(&#x22;search: &#x22;, response.results);
+
+locations.<span class="apidocCodeKeywordSpan">details</span>({placeid: response.results[0].place_id}, function(err, response) {
+  console.log(&#x22;search details: &#x22;, response.result.name);
+  // search details: Google
+});
+});
+
+locations.autocomplete({input: &#x27;Verm&#x27;, types: &#x22;(cities)&#x22;}, function(err, response) {
+console.log(&#x22;autocomplete: &#x22;, response.predictions);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.geocodeAddress" id="apidoc.element.google-locations.google_locations.prototype.geocodeAddress">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>geocodeAddress
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geocodeAddress = function (options, cb) {
+  if (!options.address) return cb({error: &#x27;Address string required&#x27;});
+  options = _.defaults(options, {
+    language: &#x27;en&#x27;
+  });
+
+  options.address = options.address.replace(/\s/g, &#x27;+&#x27;);
+
+  _makeRequest(_generateUrl(this, options, &#x27;geocode&#x27;, null), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.reverseGeocode" id="apidoc.element.google-locations.google_locations.prototype.reverseGeocode">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>reverseGeocode
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverseGeocode = function (options, cb) {
+  options = _.defaults(options, {
+    latlng: [37.42291810, -122.08542120],
+    language: &#x27;en&#x27;
+  });
+
+  options.latlng = options.latlng.join(&#x27;,&#x27;);
+
+  _makeRequest(_generateUrl(this, options, &#x27;geocode&#x27;, null), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.search" id="apidoc.element.google-locations.google_locations.prototype.search">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>search
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (options, cb) {
+  options = _.defaults(options, {
+    location: [37.42291810, -122.08542120],
+    radius: 10,
+    language: &#x27;en&#x27;,
+    rankby: &#x27;prominence&#x27;,
+    types: []
+  });
+
+  options.location = options.location.join(&#x27;,&#x27;);
+
+  if (options.types.length &#x3e; 0) {
+    options.types = options.types.join(&#x27;|&#x27;);
+  } else {
+    delete options.types;
+  }
+  if (options.rankby == &#x27;distance&#x27;) options.radius = null;
+
+  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;nearbysearch&#x27;), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Usage
+```js
+var GoogleLocations = require(&#x27;google-locations&#x27;);
+
+var locations = new GoogleLocations(&#x27;YOUR_API_KEY&#x27;);
+
+locations.<span class="apidocCodeKeywordSpan">search</span>({keyword: &#x27;Google&#x27;, location: [37.42291810, -122.08542120]},
+function(err, response) {
+  console.log(&#x22;search: &#x22;, response.results);
+
+  locations.details({placeid: response.results[0].place_id}, function(err, response) {
+    console.log(&#x22;search details: &#x22;, response.result.name);
+    // search details: Google
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.searchByAddress" id="apidoc.element.google-locations.google_locations.prototype.searchByAddress">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>searchByAddress
+        <span class="apidocSignatureSpan">(config, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">searchByAddress = function (config, cb) {
+  if (!config.address) return cb({error: &#x22;Address string required&#x22;});
+  var _self = this;
+  var options = _generateOptions(config);
+  _self.geocodeAddress(options.geocode, function(err, result){
+    if (err) return cb({message: &#x22;Error geocoding address&#x22;, error: err});
+    try {
+      var location = result.results[0].geometry.location;
+      var query = _searchQuery(location, options.search);
+      _self.search(query, function(err, result){
+        if (err) return cb({message: &#x22;Error searching for places near geocoded location&#x22;, error: err});
+        _batchDetails(_self, result, options.search.maxResults, cb);
+      });
+    } catch (exp) {
+      return cb({message: &#x22;Malformed results -- try a more specific address&#x22;, error: exp});
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+for(var index in response.predictions) {
+  locations.details({placeid: response.predictions[index].place_id}, success);
+}
+});
+
+locations.<span class="apidocCodeKeywordSpan">searchByAddress</span>({address: &#x27;1600 Amphitheatre Pkwy, Mountain View, CA&#
+x27;, name: &#x27;Goo&#x27;, maxResults: 2, rankby: &#x22;prominence&#x22;, radius: 5000}, function(err, response){
+for (var index in response.details) {
+  console.log(&#x22;Potential Match: &#x22; + response.details[index].name);
+  // Potential Match: Google
+  // Potential Match: Gooey Cookie Factory
+}
+for (var index in response.errors) {
+  console.log(&#x22;Error looking up place details: &#x22;, response.errors[index]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.searchByPhone" id="apidoc.element.google-locations.google_locations.prototype.searchByPhone">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>searchByPhone
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">searchByPhone = function (options, cb) {
+  if (!options.phone) return cb({error: &#x22;Missing required parameter &#x27;phone&#x27;&#x22;});
+  options.maxResults = options.maxResults || 1;
+  var _self = this;
+
+  _self.textsearch({query: &#x27;phone number &#x27; + options.phone}, function(err, result){
+    if (err) return cb({message: &#x22;Error from textsearch&#x22;, error: err});
+    _batchDetails(_self, result, options.maxResults, cb);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Potential Match: Gooey Cookie Factory
+  }
+  for (var index in response.errors) {
+    console.log(&#x22;Error looking up place details: &#x22;, response.errors[index]);
+  }
+});
+
+locations.<span class="apidocCodeKeywordSpan">searchByPhone</span>({phone: &#x22;(650) 253-0000&#x22;}, maxResults: 2, function(
+err, response){
+  // Returns up to 2 matches for this phone number
+});
+```
+
+## Test
+
+To test simply install development dependencies and run:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-locations.google_locations.prototype.textsearch" id="apidoc.element.google-locations.google_locations.prototype.textsearch">
+        function <span class="apidocSignatureSpan">google-locations.google_locations.prototype.</span>textsearch
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">textsearch = function (options, cb) {
+  options = _.defaults(options, {
+    query: &#x27;Google near Mountain View, CA&#x27;
+  });
+
+  _makeRequest(_generateUrl(this, options, &#x27;place&#x27;, &#x27;textsearch&#x27;), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
